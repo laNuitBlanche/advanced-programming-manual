@@ -19,5 +19,6 @@ export default defineConfig({
             { text: '困难难度', link: '/leetcode/hard/index' }
         ]
     }
-  }
+  },
+  outDir: "../dist/docs/algorithm"
 })
