@@ -4,8 +4,8 @@ import path from 'path'
 export default defineConfig({
   base: '/docs/algorithm/',
   lang:"zh-CN",
-  title: '算法笔记',
-  description: '记录leetcode题解',
+  title: '编程进阶手册',
+  description: '分享、记录数据结构、算法技巧及设计模式',
   themeConfig: {
     nav: [
       { text: 'leetcode题解', link: '/leetcode/index' }
