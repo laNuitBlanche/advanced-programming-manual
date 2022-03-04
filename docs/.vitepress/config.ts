@@ -1,24 +1,29 @@
 import { defineConfig } from 'vitepress'
-import path from 'path'
+import { getSideBarPages } from '../utils/'
 
 export default defineConfig({
-  base: '/docs/algorithm/',
-  lang:"zh-CN",
+  base: '/docs/programming-manual/',
+  lang: "zh-CN",
   title: '编程进阶手册',
   description: '分享、记录数据结构、算法技巧及设计模式',
   themeConfig: {
     nav: [
-      { text: 'leetcode题解', link: '/leetcode/index' }
+      {
+        text: '数据结构', link: '/data-structure/index'
+      },
+      {
+        text: '算法', items: [
+          { text: '简介', link: '/algorithm/index'},
+          { text: 'Leetcode题解', link: '/algorithm/leetcode/index' }
+        ]
+      },
+      {
+        text: '设计模式', link: '/design-mode/index'
+      }
     ],
     sidebar: {
-        '/leetcode/': [
-            { text: '简单难度', link: '/leetcode/easy/index',children: [
-              { text: '1.两数之和', link: '/leetcode/easy/1.两数之和'}
-            ] },
-            { text: '中等难度', link: '/leetcode/medium/index' },
-            { text: '困难难度', link: '/leetcode/hard/index' }
-        ]
+      '/algorithm/leetcode/': getSideBarPages('/algorithm/leetcode')
     }
   },
-  outDir: "../dist/docs/algorithm"
+  outDir: "../dist/docs/programming-manual"
 })

@@ -3,7 +3,7 @@ home: true
 heroText: 编程进阶手册
 tagline: 分享、记录数据结构、算法技巧及设计模式
 actionText: Get Started
-actionLink: /leetcode/index
+actionLink: /introduce
 features:
   - title: 数据结构
     details: 在开发的过程中不可避免的会遇到各种问题，数据结构式这些问题的解决方案中不可或缺的一部分，选择合适的数据结构，可以明显的提升所写程序的性能.
