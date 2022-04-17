@@ -18,7 +18,6 @@ export function getSideBarPages(dirPath: string): DefaultTheme.SideBarItem[] {
     pages.push(sideBar)
   })
   pages = dealSortDir(pages)
-  console.log(JSON.stringify(pages))
   return pages
 }
 
@@ -30,7 +29,6 @@ export function getSideBarPages(dirPath: string): DefaultTheme.SideBarItem[] {
 export function dealSortDir(pages: DefaultTheme.SideBarItem[]): DefaultTheme.SideBarItem[] {
   if (!Array.isArray(pages)) return pages;
   return pages.map(item => {
-    console.log(item,'item')
     if ( !Array.isArray((item as DefaultTheme.SideBarGroup).children)) return item;
     const isSortDir = sortDirReg.exec(item.text)
     if (isSortDir && isSortDir.length) {
